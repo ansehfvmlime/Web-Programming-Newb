@@ -1,0 +1,172 @@
+/* 기본 세팅 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* 네비게이션 스타일 */
+  nav {
+    background-color: #333;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  nav li {
+    margin: 0 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  nav a:hover {
+    background-color: #555;
+  }
+  
+  /* 메인 영역 */
+  main {
+    padding: 2rem;
+  }
+  
+  /* 각 섹션 제목 */
+  main h2 {
+    margin-bottom: 1rem;
+    border-left: 5px solid #74ebd5;
+    padding-left: 10px;
+  }
+  
+  /* 카드 그리드 레이아웃 */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card.html { border-top: 4px solid #ff7f50; }
+  .card.css { border-top: 4px solid #6495ed; }
+  .card.js { border-top: 4px solid #ffd700; }
+  
+  /* 폼 스타일 */
+  form {
+    margin-top: 1rem;
+  }
+  form input, form select, form textarea, form button {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  form button {
+    background-color: #74ebd5;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  form button:hover {
+    background-color: #57c9d3;
+  }
+  
+  /* 표 스타일 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  caption {
+    caption-side: top;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  thead {
+    background-color: #74ebd5;
+    color: white;
+  }
+  
+  /* 미디어 영역 (오디오, 비디오) */
+  audio, video {
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* aside */
+  aside {
+    background: #eef6fb;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-left: 5px solid #74ebd5;
+  }
+  
+  /* 푸터 */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* 가상 요소 사용 예시 */
+  section#intro p::before {
+    content: "👉 ";
+  }
+  section#intro p::after {
+    content: " 👈";
+  }
+  
+  /* 반응형 웹 - 미디어 쿼리 */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

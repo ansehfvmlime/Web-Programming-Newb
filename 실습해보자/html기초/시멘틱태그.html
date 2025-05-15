@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic 태그 웹 페이지 예시</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+      }
+      main {
+        padding: 20px;
+      }
+      article {
+        margin-bottom: 20px;
+      }
+      section {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header 태그: 페이지 상단에 위치한 로고, 네비게이션 등을 포함 -->
+    <header>
+      <h1>My Website (header태그)</h1>
+      <nav>
+        <a href="#home">Home(네비게이션1)</a>
+        <a href="#about">About(네비게이션2)</a>
+        <a href="#contact">Contact(네비게이션3)</a>
+      </nav>
+    </header>
+
+    <!-- main 태그: 페이지의 주요 콘텐츠 -->
+    <main>
+      <!-- article 태그: 독립적으로 구분되는 콘텐츠, 블로그 글 등 -->
+      <article>
+        <h2>Semantic HTML이란?</h2>
+        <p>
+          Semantic HTML은 태그의 이름만으로도 그 내용과 역할을 쉽게 이해할 수
+          있도록 만든 HTML 요소를 의미합니다. 검색 엔진과 스크린 리더가 페이지
+          구조를 더 쉽게 파악할 수 있습니다.
+        </p>
+      </article>
+
+      <!-- section 태그: 페이지의 특정 섹션을 나눌 때 사용 -->
+      <section>
+        <h2>Semantic 태그의 장점</h2>
+        <ul>
+          <li>구조가 명확해짐</li>
+          <li>검색 엔진 최적화(SEO) 향상</li>
+          <li>접근성 향상</li>
+        </ul>
+      </section>
+
+      <!-- aside 태그: 부가적인 콘텐츠 -->
+      <aside>
+        <h2>관련 링크</h2>
+        <ul>
+          <li><a href="https://www.w3schools.com/html/">HTML 튜토리얼</a></li>
+          <li>
+            <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element"
+              >MDN HTML 요소 문서</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- footer 태그: 페이지 하단 정보 -->
+    <footer>
+      <p>Copyright &copy; 2025 My Website</p>
+      <p>
+        Contact us at <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+      </p>
+    </footer>
+  </body>
+</html>

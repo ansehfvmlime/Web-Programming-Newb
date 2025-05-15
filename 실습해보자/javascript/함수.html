@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function isLeapYear(year) {
+        // 100으로 나누 나머지는 0이면 안되고 4로 나누면 0이여야 함 / 그 중에서도 400으로 나눴을때 0인건 또 됨
+        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+      }
+
+      console.log(`2020년은 윤년입니까?===${isLeapYear(2020)}`);
+      console.log(`2010년은 윤년입니까?===${isLeapYear(2010)}`);
+      console.log(`2000년은 윤년입니까?===${isLeapYear(2000)}`);
+      console.log(`1900년은 윤년입니까?===${isLeapYear(1900)}`);
+
+      //
+      console.log("--------------------------");
+
+      // array = 매개변수
+      function min(array) {
+        let output = array[0];
+        for (const item of array) {
+          if (output > item) {
+            output = item;
+          }
+        }
+        return output;
+      }
+      const testArray = [52, 272, 32, 103, 207];
+      console.log(`${testArray} 중에서`);
+      console.log(`최솟값 = ${min(testArray)}`);
+
+      //
+      console.log("--------------------------");
+
+      // 가변 매개변수
+      function sample(...items) {
+        console.log(items);
+      }
+      sample(1, 2);
+      sample(3, 4, 5);
+      sample(6, 7, 8, 9);
+
+      console.log("--------------------------");
+
+      // 가변 매게변수를 사용할 때는 맨 뒤에 매개변수에만 사용한다.
+      function sample2(a, b, ...c) {
+        console.log(a, b, c);
+      }
+      sample2(1, 2);
+      sample2(3, 4, 5);
+      sample2(6, 7, 8, 9);
+    </script>
+  </head>
+  <body></body>
+</html>

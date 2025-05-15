@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./연습연습3.css">
+</head>
+<body>
+    <header>
+      <h1>🌐 나의 웹프로그래밍 포트폴리오</h1>
+      <p>HTML, CSS, JavaScript의 기초부터 실전까지</p>
+      <div class="promo-badge">NEW!</div>
+    </header>
+  
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#intro">소개</a></li>
+          <li><a href="#skills">기술</a></li>
+          <li><a href="#form">문의</a></li>
+          <li><a href="#media">미디어</a></li>
+        </ul>
+      </nav>
+      <div class="tip-box">
+        <h3>💡 팁</h3>
+        <p><code>:hover</code>, <code>::before</code>, <code>@media</code> 같은 고급 CSS 기능도 익혀보세요!</p>
+      </div>
+    </aside>
+  
+    <main>
+      <section id="intro">
+        <h2>👋 자기소개</h2>
+        <p><strong>HTML</strong>은 웹페이지의 구조를, <em>CSS</em>는 디자인을, <mark>JavaScript</mark>는 동작을 담당합니다.</p>
+      </section>
+  
+      <section id="skills">
+        <h2>🧰 주요 기술</h2>
+        <div class="grid-container">
+          <article class="card html"><h3>HTML</h3><p>시맨틱 태그, 폼, 멀티미디어 포함</p></article>
+          <article class="card css"><h3>CSS</h3><p>레이아웃, 전환 효과, 애니메이션, 미디어쿼리</p></article>
+          <article class="card js"><h3>JavaScript</h3><p>이벤트 처리 및 DOM 조작 (예정)</p></article>
+        </div>
+      </section>
+  
+      <section id="form">
+        <h2>📬 연락처 양식</h2>
+        <form>
+          <label>이름 <input type="text" name="name" required></label>
+          <label>이메일 <input type="email" name="email"></label>
+          <label>문의유형
+            <select name="category">
+              <option>일반</option>
+              <option>기술</option>
+              <option>제휴</option>
+            </select>
+          </label>
+          <label>내용<textarea name="message" rows="4"></textarea></label>
+          <button type="submit">제출</button>
+        </form>
+      </section>
+  
+      <section>
+        <h2>📊 학습 진도표</h2>
+        <table>
+          <caption>2025년 1학기 학습 내용</caption>
+          <thead><tr><th>주차</th><th>내용</th><th>진도</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>웹 개요</td><td>완료</td></tr>
+            <tr><td>2</td><td>HTML 기초</td><td>완료</td></tr>
+            <tr><td>3</td><td>CSS 기초</td><td>완료</td></tr>
+            <tr><td>4</td><td>레이아웃</td><td>진행중</td></tr>
+          </tbody>
+        </table>
+      </section>
+  
+      <section id="media">
+        <h2>🎵 미디어 예시</h2>
+        <audio controls src="sample.mp3"></audio>
+        <video width="320" height="240" controls>
+          <source src="sample.mp4" type="video/mp4">
+        </video>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2025 웹프로그래밍 수업 | 제작자: 김민서</p>
+    </footer>
+  </body>
+  
+</html>

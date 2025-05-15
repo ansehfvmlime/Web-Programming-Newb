@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css 연습장</title>
+
+    <style>
+      /* em과 rem의 차이 설명명 */
+      body {
+        font-size: 1em;
+      }
+      div#box1 {
+        font-size: 2em;
+      }
+      div#box1 > div {
+        font-size: 2em;
+      }
+
+      body {
+        font-size: 1rem;
+      }
+      div#box2 {
+        font-size: 2rem;
+      }
+      div#box2 > div {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- em -->
+    body(1em)
+    <div id="box1">
+      body-div(2em)
+      <div>body-div-div(2em)</div>
+      <div>body-div-div(2em)</div>
+    </div>
+
+    <hr />
+    <!-- rem -->
+    body(1em)
+    <div id="box2">
+      body-div(2rem)
+      <div>body-div-div(2rem)</div>
+      <div>body-div-div(2rem)</div>
+    </div>
+  </body>
+</html>

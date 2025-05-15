@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습장</title>
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid red;
+      }
+      th {
+        background-color: antiquewhite;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th[scope="row"] {
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: bold;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr class="th">
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+      </tr>
+      <tr>
+        <td>가</td>
+        <td colspan="4">나</td>
+        <!-- <td>다</td>
+        <td>라</td>
+        <td>마</td> -->
+      </tr>
+      <tr>
+        <td>바</td>
+        <td>사</td>
+        <td>아</td>
+        <td>자</td>
+        <td>차</td>
+      </tr>
+      <tr>
+        <td>키</td>
+        <td>타</td>
+        <td>파</td>
+        <td>윽</td>
+        <td rowspan="2">하</td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <!-- <td>E</td> -->
+      </tr>
+    </table>
+    <table>
+      <!-- 표 제목 -->
+      <caption>
+        <em>여행지 총 정리</em>
+      </caption>
+      <!-- 표 확장 -->
+      <col style="width: 160px" />
+      <col style="width: max-content" />
+      <colgroup span="2" style="width: 160px"></colgroup>
+      <!-- 표 확장장 -->
+      <thead>
+        <tr>
+          <th scope="col">관광지</th>
+          <th scope="col">위치</th>
+          <th scope="col">입장료</th>
+          <th scope="col">추천 계절</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">센소지</th>
+          <td rowspan="3">도쿄</td>
+          <td>무료</td>
+          <td>봄</td>
+        </tr>
+        <tr>
+          <th scope="row">시부야스카이</th>
+          <!--도쿄-->
+          <td>2200엔 (성인)</td>
+          <td rowspan="2">봄, 가을</td>
+        </tr>
+        <tr>
+          <th scope="row">고쿄</th>
+          <!--도쿄-->
+          <td>무료(투어 제외)</td>
+          <!--봄, 가을-->
+        </tr>
+        <tr>
+          <th scope="row">청수사</th>
+          <td rowspan="3">교토</td>
+          <td rowspan="2">500엔</td>
+          <td>가을, 겨울</td>
+        </tr>
+        <tr>
+          <th scope="row">에이칸도</th>
+          <!--교토-->
+          <!--500엔엔-->
+          <td rowspan="2">가을</td>
+        </tr>
+        <tr>
+          <th scope="row">후시미이나리신사</th>
+          <!--교토-->
+          <td>무료</td>
+          <!--가을-->
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4"><a href="#mokcha">목차로 이동</a></th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 자바스크립트 객체를 연습하기 위해,
+      // 다음 기능을 수행하는 JavaScript 코드를 작성(html 코드 내 <script> 태그로 포함)하여 실행(크롬에서 실행 후 개발자 도구 console 창에서 결과 확인)합니다.
+
+      // 그리고, JavaScript 코드(html 내)와 웹 페이지 console 창을 캡쳐한 후 공유하기시 바랍니다.
+
+      // 학생 객체 리터럴 생성
+      // 속성: 이름, 학년, 시험 성적 포함
+      // 메소드: 학생 속성 정보를 모두 출력하는 메소드 포함
+      // update student를 생성해서 기존 학생 객체에 실습 성적, 과제 성적 속성 추가(전개 연산자 이용)
+      // 기존 학생 객체에 총합 계산 메소드 추가(시험 40%, 실습 30%, 과제 30%로 계산한 100점 만점 총점을 계산. 소숫점 2자리로 출력)
+
+      const 학생 = {
+        이름: "미정",
+        학년: "미정",
+        시험성적: "미정",
+        실습성적: "미정",
+        과제성적: "미정",
+        총성적: "미정",
+        출력: function () {
+          console.log(`이름: ${this.이름}`);
+          console.log(`학년: ${this.학년}`);
+          console.log(`시험 성적: ${this.시험성적}`);
+          console.log(`실습 성적: ${this.실습성적}`);
+          console.log(`과제 성적: ${this.과제성적}`);
+          console.log(`총 점수: ${this.총성적}`);
+        },
+      };
+      학생.출력();
+      console.log("=============성적 업데이트 중입니다.=============");
+
+      const updateStudent = {
+        ...학생,
+        이름: "김민서",
+        학년: "3",
+        시험성적: "99.131",
+        실습성적: "97",
+        과제성적: "82",
+        총점계산: function () {
+          const 점수 =
+            this.시험성적 * 0.4 + this.실습성적 * 0.3 + this.과제성적 * 0.3;
+          this.총성적 = 점수.toFixed(2);
+        },
+      };
+      updateStudent.총점계산();
+      updateStudent.출력();
+    </script>
+  </head>
+  <body></body>
+</html>

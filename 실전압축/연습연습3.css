@@ -1,0 +1,184 @@
+/* 전체 레이아웃: 그리드로 페이지 구획 */
+body {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  /* 기본 공통 */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  /* 헤더 */
+  header {
+    grid-area: header;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* 사이드바 */
+  aside {
+    grid-area: aside;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-right: 1px solid #ccc;
+  }
+  aside nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  aside nav li {
+    margin-bottom: 0.5rem;
+  }
+  aside nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  aside nav a:hover {
+    color: #0077cc;
+  }
+  .tip-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e0f7fa;
+    border-left: 4px solid #00bcd4;
+  }
+  
+  /* 메인 콘텐츠 */
+  main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: white;
+  }
+  
+  /* 푸터 */
+  footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* 기술 카드 그리드 */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: #fafafa;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-left: 5px solid #999;
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .card.html { border-color: #f16529; }
+  .card.css { border-color: #2965f1; }
+  .card.js { border-color: #f0db4f; }
+  
+  /* 폼 요소 */
+  form input, form textarea, form select, form button {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  form button {
+    background: #74ebd5;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* 테이블 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  thead {
+    background-color: #74ebd5;
+    color: white;
+  }
+  
+  /* 미디어 */
+  audio, video {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* 반응형 */
+  @media (max-width: 768px) {
+    body {
+      grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+    }
+  }
+  /* 배너 (header 내부에 절대 위치한 요소 예시) */
+header .promo-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4081;
+    color: white;
+    padding: 0.3em 0.7em;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  
+  /* aside nav 고정 (sticky) */
+  aside nav {
+    position: sticky;
+    top: 20px;
+  }
+  
+  /* footer fixed 예시 (선택적 사용) */
+/*   
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  */
+  
+  /* 카드에 z-index (마우스 올릴 때 가장 위로) */
+  .card {
+    position: relative;
+    z-index: 1;
+  }
+  .card:hover {
+    z-index: 5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  nav{
+    background-color: #ccc;
+  }
+  

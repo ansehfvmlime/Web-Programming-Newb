@@ -1,0 +1,149 @@
+/* [1] 태그 선택자, 아이디(#), 클래스(.), 속성 선택자([type]) 사용 */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* [5] box-sizing 사용 */
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  #bottomMenu {
+    text-align: center;
+    background-color: #222;
+    padding: 20px;
+  }
+  
+  img[src$=".jpg"] { /* [1] 속성 선택자 사용 */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* [7] transition 사용 */
+  }
+  
+  img:hover {
+    transform: scale(1.05); /* [3] 동적 가상 클래스 */
+  }
+  
+  /* [2] 그룹 선택자, 자식 선택자 사용 */
+  header, nav, footer {
+    padding: 20px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  nav > ol {
+    margin-left: 20px; /* 자식 선택자 사용 */
+  }
+  
+  /* [3] 가상 클래스 선택자 */
+  a:link {
+    color: #0077cc;
+  }
+  
+  a:visited {
+    color: #555;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  input:focus {
+    border-color: #ff6600;
+  }
+  
+  section:first-of-type {
+    background-color: #fffdf5; /* 구조적 선택자 */
+  }
+  
+  /* [4] margin, padding, border, display 사용 */
+  section {
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    display: block;
+    max-width: 800px;
+  }
+  
+  /* [5] width, height */
+  img {
+    width: 250px;
+    height: auto;
+  }
+  
+  /* [6] position, z-index, float, clear */
+  header {
+    position: relative;
+    z-index: 10;
+  }
+  
+  aside {
+    float: right;
+    width: 25%;
+    margin: 10px;
+  }
+  
+  main {
+    clear: both; /* float 요소 초기화 */
+  }
+  
+  /* [7] animation 사용 */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  main {
+    animation: fadeIn 1.2s ease-in;
+  }
+  
+  /* [8] flex-box 사용: footer 링크 정렬 */
+  footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* [8] grid-layout 사용: 표를 grid 스타일로 변경 */
+  table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead, tbody, tfoot {
+    display: contents; /* grid와 호환되도록 설정 */
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #999;
+    text-align: center;
+  }
+  
+  /* [9] 미디어 쿼리: 모바일 대응 */
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 0.9rem;
+    }
+  
+    aside {
+      float: none;
+      width: 100%;
+      margin: 0;
+    }
+  
+    nav ol {
+      padding-left: 0;
+    }
+  
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+  
+    footer ul {
+      flex-direction: column;
+    }
+  }
+  

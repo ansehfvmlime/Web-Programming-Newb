@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여기에는 타이틀 이름이 들어가요</title>
+  </head>
+  <body>
+    <!--주석은 이렇게 사용해요-->
+    <h1>여기에는 본문 글씨가 들어가요</h1>
+    <!--h(header)는 제목이기 떄문에 br 사용 안해도 알아서 내려감-->
+    <h2>여기에는 본문 글씨가 들어가요</h2>
+    <h3>여기에는 본문 글씨가 들어가요</h3>
+    <h4>여기에는 본문 글씨가 들어가요</h4>
+    <h5>여기에는 본문 글씨가 들어가요</h5>
+    <h6>여기에는 본문 글씨가 들어가요</h6>
+
+    <!--hr은 단락을 구별하고 싶을때 사용해요요-->
+    <hr />
+
+    <!--p는 parameter-->
+    <p>
+      안녕하세요<br />안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+      안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+      안녕하세요안녕하세요안녕하세요
+    </p>
+    문단 바꾸려면 br 써야해요 <br /><br />
+    두번 br 쓰면 공백도 생겨요 <br />
+
+    <hr />
+
+    <h1>ul태그 예시</h1>
+    <ul>
+      <li>김민서</li>
+      <li>김민제</li>
+      <li>김현우</li>
+    </ul>
+
+    <h1>ol태그 예시</h1>
+    <ol>
+      <li>첫번째</li>
+      <li>두번째</li>
+      <li>세번째</li>
+    </ol>
+
+    <h1>ul, ol 동시 사용 예시</h1>
+    <ul>
+      <li>그냥단순나열
+        <ul>
+          <li>그냥</li>
+          <li>단순</li>
+          <li>나열</li>
+        </ul></li>
+      <li> 순서있게나열
+        <ol>
+          <li>순서</li>
+          <li>있게</li>
+          <li>나열</li>
+      </li>
+      </ol>
+    </ul>
+
+<hr>
+
+<h1>dl태그 사용해보기기</h1>
+<dl>
+  <dt>김민서</dt>
+  <dd>명지대학교 3학년 재학중, 서울 성북구 거주, 남자</dd>
+  <dt>보욱이</dt>
+  <dd>어딘가 졸업, 어딘가 거주, 남자</dd>
+</dl>
+
+<hr>
+
+<p>이제부터 <strong>하이퍼링크</strong>를 사용해보자.</p>
+<!--새로운 팝업창을 띄우며 새 창을 열기-->
+    <a href="https://www.naver.com/" target="_blank" title="네이버">네이버 홈페이지 with blank</a> <br>
+
+    <a href="https://www.naver.com/" target="_self" title="네이버">네이버 홈페이지 with self</a> <br>
+
+    <a href="./second.html" target="_blank" title="두번째 웹페이지" >내부 사이트로 연결</a> <br>
+    
+    <a href="#top" target="_top" title="지정된 위치로 이동">위로가기</a>
+    
+    <hr>
+
+    <p>이미지를 삽입하여봅시다.</p>
+    <br>
+    <!--width의 기본 단위는 픽셀임. %로 바꾸면 웹사이트 크기가 바뀌면 사진도 같이 크기가 계속 바뀜-->
+    <img src="./img/증명사진.jpg" alt="증명사진" title="내 얼굴" width="50">
+
+    <p>하이퍼링크 안에 이미지를 넣어봅시다</p>
+    <a href="https://www.naver.com/" target="_blank" title="네이버"><img src="./img/네이버.jpeg" alt="네이버 바로가기" width="200"></a>
+    
+
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 320px;
+        height: 240px;
+
+        /* width: 80px;
+        height: 60px; */
+
+        /* width: 320px;
+        height: 240px; */
+        background-image: url(./img/coffee.jpg);
+        color: white;
+        border: 1px solid black;
+
+        background-repeat: no-repeat;
+        /* background-repeat: repeat; */
+        /* background-repeat: repeat-x; */
+        /* background-repeat: repeat-y; */
+        /* background-repeat: space; */
+        /* background-repeat: round; */
+
+        /* 배경 이미지 크기 설정하기 */
+        /* background-size: contain; */
+        /* background-size: auto; */
+        /* background-size: cover; */
+
+        /* background position 설정*/
+        background-position: 100%;
+        /* background-position: center top; */
+        /* background-position: 30px 50px; */
+      }
+
+      body {
+        height: 1000px;
+      }
+      .parent {
+        width: 320px;
+        height: 240px;
+        border: 1px solid black;
+        overflow: scroll;
+      }
+      /* 사진은 드래그해도 안움직이는 fixed 상태인데 글씨는 계속 드래그됨 */
+      .children {
+        height: 2000px;
+        background-image: url(./img/coffee.jpg);
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div>1번 사례</div>
+    <div class="parent">
+      <div class="children">
+        <p>
+          가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        </p>
+        <p>
+          가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        </p>
+        <p>
+          가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        </p>
+        <p>
+          가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

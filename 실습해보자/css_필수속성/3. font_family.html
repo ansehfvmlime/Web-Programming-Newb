@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* font-family */
+      h1:first-child {
+        font-family: "바탕체", "Times New Roman", serif;
+      }
+      /* 바탕체 적용 -> 없으면 "Times New Roman"적용 -> 없으면 serif(명조) 적용 */
+      h1:nth-child(2) {
+        font-family: "굴림체", Arial, sans-serif;
+      }
+      h1:nth-child(3) {
+        font-family: "맑은 고딕", Arial, sans-serif;
+      }
+
+      /* font-size */
+      p:nth-of-type(1) {
+        font-size: 14px;
+      }
+      p:nth-of-type(2) {
+        font-size: 1rem;
+      }
+      p:nth-of-type(3) {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 글꼴 지정 -->
+    <h1>Font-family - 글꼴 지정</h1>
+    <h1>Font-family - 글꼴 지정</h1>
+    <h1>Font-family - 글꼴 지정</h1>
+
+    <!-- font-size 지정 -->
+    <p>폰트 사이즈 지정 확인</p>
+    <p>폰트 사이즈 지정 확인</p>
+    <p>폰트 사이즈 지정 확인</p>
+  </body>
+</html>

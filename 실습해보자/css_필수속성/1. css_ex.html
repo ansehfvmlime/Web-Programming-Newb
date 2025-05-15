@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style을 적용해보자</title>
+
+    <style>
+      /* 태그 선택자: h1태그 전부에 대하여 설정 */
+      h1 {
+        font-size: 40px;
+        color: blue;
+      }
+
+      /* 전체 선택자: 전체 태그를 선택자로 지정  */
+      * {
+        margin: 0px;
+      }
+
+      /* id 선택자 */
+      #unique {
+        background-color: aqua;
+      }
+
+      /* class 선택자: class 선택자 전부를 지정 */
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+
+      /* 기본 속성 선택자 */
+      a[href] {
+        color: yellow;
+        /* <a>요소를 block레벨로 변경 */
+        display: block;
+      }
+      a[target="_blank"] {
+        color: #ff0000;
+      }
+
+      /* 그룹 선택자 예시 */
+      .title,
+      .subtitle {
+        background-color: rgb(219, 219, 202);
+      }
+      p,
+      ol {
+        color: blue;
+      }
+
+      /* 자식-하위 선택자 예시 */
+      .box > div {
+        background-color: yellow;
+      }
+      .box div {
+        color: blue;
+      }
+
+      /* 인접-일반 형제 선택자 예시 */
+      h3 + div {
+        background-color: yellow;
+      }
+      h3 ~ div {
+        color: magenta;
+      }
+
+      /* 링크 가상 클래스 선택자 예시 */
+      a:link {
+        color: orange;
+      }
+      a:visited {
+        color: green;
+      }
+
+      /* 가상요소 + 동적 가상요소 클래스 선택자 예시*/
+      li:hover::before {
+        content: "->";
+        color: magenta;
+      }
+      li:active::after {
+        content: ★;
+        color: magenta;
+      }
+
+      /* 입력요소 가상 클래스 선택자 예시 */
+      input:checked + label {
+        color: #ff0000;
+      }
+      input:focus {
+        background-color: yellow;
+      }
+
+      /* 입력요소 가상 클래스 선택자 예시 2 */
+      button:disabled {
+        color: gray;
+        background: lightgrey;
+      }
+      button:enabled {
+        color: blue;
+        background: lightcyan;
+      }
+    </style>
+
+    <!-- 외부 스타일 시트 사용 -->
+    <link rel="stylesheet" href="./css/외부 스타일 시트 예시.css" />
+  </head>
+
+  <body>
+    <!-- 내부 스타일 시트 -->
+    <h1>css 내부 스타일</h1>
+    <br />
+    <!-- 인라인 스타일 시트 -->
+    <h1 style="color: #ff0000; font-size: 40px">css 인라인 스타일</h1>
+    <!-- 이렇게 둘이 나뉘는 이유: 범위가 다름
+     1번 내부 스타일의 경우 모든 h1태그 전체에 영향을 미침.
+     하지만 2번 내부 스타일의 경우 모든 h1 태그가 아닌 해당 태그에만 영향을 미침
+     만약 내부 스타일로 전체 선언한 css와 인라인 스타일이 충돌할 경우, 가까운 쪽이 영향을 미침 -->
+    <br />
+    <h2>외부 스타일 시트</h2>
+    <hr />
+
+    <fieldset>
+      <legend>id, class 선택자 예시</legend>
+      <h3 class="red">아이디 선택자</h3>
+      <div class="red">id 속성값으로 선택자를 지정</div>
+      <div class="red" id="unique">id 속성값을 유일해야함</div>
+
+      <h3 class="blue">클래스 선택자</h3>
+      <div class="blue">class 속성값으로 선택자를 지정</div>
+      <div class="blue">중복해서 사용 가능</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>기본 속성 선택자 예시</legend>
+      <a href="#">기본 a태그 1</a>
+      <a href="#">기본 a태그 2</a>
+      <a href="#" target="_blank">새 창으로 열리는 a 태그</a>
+    </fieldset>
+    <br />
+    <h2 style="color: black">조합 선택자 예시</h2>
+    <br />
+    <fieldset>
+      <legend>그룹 선택자 예시</legend>
+      <h1 class="title">김민서</h1>
+      <p>2000년생, 돈암초, 삼선중, 동성고 졸업, 명지대학교 재학중</p>
+      <h2 class="subtitle">취미</h2>
+      <ol>
+        <li>게임</li>
+        <li>독서</li>
+        <li>수면</li>
+      </ol>
+    </fieldset>
+
+    <fieldset>
+      <legend>자식-하위 선택자 예시</legend>
+      <div class="box">
+        <div>box 클래스의 1st 자식</div>
+        <ul>
+          <li><div>box 클라스의 자식의 자식</div></li>
+          <li><div>box 클라스의 자식의 자식</div></li>
+        </ul>
+        <div>box 클라스의 3rd 자식</div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>인접-일반 형제 선택자 예시</legend>
+      <div>h3 앞의 형제 div 태그</div>
+
+      <h3>h3 태그</h3>
+      <div>h3 뒤에 인접한 형제 div 태그</div>
+      <div>h3 뒤의 형제 div 태그</div>
+
+      <h3>h4 태그</h3>
+      <div>h3 뒤의 형제 div 태그</div>
+    </fieldset>
+    <br />
+    <h2 style="color: black">가상요소 선택자 예시</h2>
+    <br />
+    <fieldset>
+      <legend>링크 가상 클래스 선택자 예시</legend>
+      <a href="https://www.naver.com">네이버</a>
+      <a href="https://www.google.com">구글</a>
+      <a href="https://www.amazon.com">아마존</a>
+    </fieldset>
+    <fieldset>
+      <legend>가상요소 + 동적 요소 클래스 선택자 예시</legend>
+      <ul>
+        <li><a href="#">링크1</a></li>
+        <li><a href="#">링크2</a></li>
+        <li><a href="#">링크3</a></li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>입력요소 가상 클래스 선택자 예시</legend>
+      <input type="checkbox" id="userid" />
+      <label for="userid">아이디</label> <br />
+
+      <label for="pw">비밀번호</label>
+      <input type="password" id="pw" />
+    </fieldset>
+    <fieldset>
+      <legend>입력요소 가상 클래스 선택자 예시2</legend>
+      <p>
+        <button enabled>버튼(enabled)</button>
+        <button disabled>버튼(disabled)</button>
+      </p>
+    </fieldset>
+  </body>
+</html>

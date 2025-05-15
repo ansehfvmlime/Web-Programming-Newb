@@ -1,0 +1,265 @@
+/* 60211644 김민서 기초웹 과제#2 */
+/* 기본 설정 */
+
+
+body {
+    font-family:'Noto Sans KR', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* header */
+  header {
+    background-color: #fff8f0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffcc99;
+  }
+  
+  /* Google Font 하나 제목에 지정 */
+  header h1 {
+    font-family:"Nanum Gothic";
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+  }
+
+  header strong{
+    color: red;
+  }
+  
+  /* display 인라인 블럭 */
+  header a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0077cc;
+  }
+  
+  header a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 네비게이션 */
+  nav {
+    position: sticky;
+    top: 0;
+    background-color:#8d4511;
+    padding: 5px;
+    color: wheat;
+    text-align: center;
+    a{color: rgb(255, 255, 255); text-decoration: none; padding-left: 30px;}
+    a:hover{
+        color: yellow;
+        font-style: italic;
+        } 
+  }
+  
+
+  nav h2 {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  
+  /* 본문 */
+  main {
+    padding: 20px;
+    background-color: #fff8f0;
+    text-align: center;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h2 {
+    font-size: 1.6rem;
+    color: #d2691e;
+    border-bottom: 2px solid #ffa07a;
+    padding-bottom: 5px;
+    background-image: none;
+  }
+  
+  section h4 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  section img {
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  /* 표 스타일 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+  }
+  
+  /* 그룹 선택자 */
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f0e5d8;
+    font-weight: bold;
+  }
+/* 구조적 가상 클래스를 사용해서 body의 th 부분만 강조 */
+  tbody th:first-child {
+    background-color: #fef3c7;
+    font-weight: bold;
+  }
+  
+  caption {
+    margin-bottom: 10px;
+    font-style: italic;
+    color: #666;
+  }
+  
+  tfoot a {
+    display: inline-block;
+    margin-top: 5x;
+    color: #0077cc;
+    text-decoration: none;
+  }
+
+
+  aside {
+    padding: 20px;
+    background-color: #fff8f0;
+    text-align: center;
+  }
+
+  
+  /* footer 영역 */
+  footer{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  footer a{
+    color: aliceblue;
+  }
+/* flex box 사용을 통해 사이트들을 가로로 나열 */
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    
+  }
+
+  /* img 영역 */
+  img[src$=".jpg"] { /*속성 선택자 사용 */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* [7] transition 사용 */
+  }
+  
+  img:hover {
+    transform: scale(1.3); /*동적 가상 클래스 */
+  }
+
+  /* 입력요소 가상 클래스 */
+  input:focus{
+    background-color: rgb(228, 255, 198);
+  }
+
+  input[type="submit"]:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  h4 span{
+    color: brown;
+  }
+
+  /* fieldset 꾸미기 */
+  fieldset{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  legend{
+    font-weight: bold;
+    padding: 0 20px;
+    font-size: 1.2em;
+  }
+
+  ul p{
+    margin-bottom: 2px;
+  }
+
+  /* 아래로 정렬 말고 옆으로 정렬 */
+  #Date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  /* hr에 class 부여, class 선택자 사용 */
+  .divider{
+    border: none;
+    height: 2px;
+    background-color: #ffa07a;
+    width: 100%;
+    margin: 30px auto;
+    border-radius: 2px;
+  }
+
+  /* 대길이라는 글자에 Span id=blink 걸어서 마우스 갖다 대면 좀 특별하게 보이게 */
+  #blink{
+    text-decoration: underline;
+    transition: all 0.3s ease;
+  }
+  #blink:hover{
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+  }
+
+  /* 반응형 웹을 위해 - 옆으로 길쭉 튀어나오는거 싹다 정리 */
+  @media (max-width: 768px) {
+    body{
+      font-size: large;
+    }
+    #Date {
+      display: block; /* 혹은 none, inline 등 원하는 레이아웃으로 변경 */
+      flex-direction: unset; /* flex 관련 속성 제거 */
+      justify-content: unset;
+    }
+
+    nav {
+      position: unset;
+      top: unset;
+      display: flex;
+      flex-direction: column;
+      a {
+        padding-left: 0;
+      }
+    }
+
+    footer ul {
+      display: unset;
+    }
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox</title>
+    <style>
+      .flex-container {
+        display: flex;
+        width: 500px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: aqua;
+      }
+      /* figure: 이미지 묶을때 자주 씀
+      calc= 단위가 다른 %와 px 계산하기 위해 / 33%로 해서 그림이 3개정도 들어갈 수 있게, -5px 좀 여유 주려고 */
+      figure {
+        width: calc(33% - 5px);
+        font-size: 0;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <figure>
+        <img src="./images/1.jpg" alt="sample 1" />
+      </figure>
+      <figure>
+        <img src="./images/2.jpg" alt="sample 2" />
+      </figure>
+      <figure>
+        <img src="./images/3.jpg" alt="sample 3" />
+      </figure>
+      <figure>
+        <img src="./images/4.jpg" alt="sample 4" />
+      </figure>
+      <figure>
+        <img src="./images/5.jpg" alt="sample 5" />
+      </figure>
+      <figure>
+        <img src="./images/6.jpg" alt="sample 6" />
+      </figure>
+    </div>
+  </body>
+</html>

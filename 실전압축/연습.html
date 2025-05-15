@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기초 웹프로그래밍 홈페이지</title>
+  <!-- 외부 CSS와 구글 폰트 연결 -->
+  <link rel="stylesheet" href="./연습연습.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 시맨틱 태그: 헤더 영역 -->
+  <header>
+    <h1>기초 웹프로그래밍 과제 홈페이지</h1>
+    <p>HTML과 CSS 실습 통합 예제</p>
+  </header>
+
+  <!-- 시맨틱 태그: 네비게이션 바 -->
+  <nav>
+    <ul>
+      <li><a href="#intro">소개</a></li>
+      <li><a href="#layout">레이아웃</a></li>
+      <li><a href="#form">폼 예제</a></li>
+    </ul>
+  </nav>
+
+  <!-- 메인 콘텐츠 영역 -->
+  <main>
+    <section id="intro">
+      <h2>HTML 구조 예시</h2>
+      <article>
+        <h3>텍스트 태그 및 강조</h3>
+        <p><strong>강조된 글자</strong>와 <em>기울어진 글자</em> 사용 예시</p>
+        <p>HTML의 시맨틱 태그: <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code></p>
+        <!-- 이미지 삽입과 설명을 위한 figure 태그 사용 -->
+        <figure>
+          <img src="./img/guardiantales-20200906-113729-000-resize.jpg" alt="예시 이미지">
+          <figcaption>예시 이미지 설명</figcaption>
+        </figure>
+        <ul>
+          <li>리스트 항목 예시 (ul 사용)</li>
+          <li>설명 추가 예시</li>
+        </ul>
+        <ol>
+          <li>순서 있는 리스트 항목</li>
+          <li>두 번째 항목</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="layout">
+      <h2>CSS Flex/Grid Layout</h2>
+      <!-- Flexbox 레이아웃 사용 예시 -->
+      <div class="flex-container">
+        <div class="box">Flex 1</div>
+        <div class="box">Flex 2</div>
+        <div class="box">Flex 3</div>
+      </div>
+      <!-- Grid 레이아웃 사용 예시 -->
+      <div class="grid-container">
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">Grid 4</div>
+      </div>
+    </section>
+
+    <section id="form">
+      <h2>폼 구성 예시</h2>
+      <!-- 입력 폼 예시: 텍스트, 비밀번호, 제출 -->
+      <form action="#" method="post">
+        <label for="username">이름:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">이메일:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com"><br>
+
+        <label for="gender">성별:</label>
+        <select id="gender" name="gender">
+          <option value="male">남성</option>
+          <option value="female">여성</option>
+          <option value="other">기타</option>
+        </select><br>
+
+        <label>관심사:</label>
+        <input type="checkbox" name="interest" value="html"> HTML
+        <input type="checkbox" name="interest" value="css"> CSS
+        <input type="checkbox" name="interest" value="js"> JavaScript<br>
+
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" value="제출">
+      </form>
+    </section>
+  </main>
+
+  <!-- 시맨틱 태그: 보조 정보 영역 -->
+  <aside>
+    <h3>추가 정보</h3>
+    <p>이 홈페이지는 CSS의 전환 효과, 가상 클래스, 선택자 조합, 미디어 쿼리 등을 포함합니다.</p>
+  </aside>
+
+  <!-- 시맨틱 태그: 푸터 영역 -->
+  <footer>
+    <p>&copy; 2025 기초 웹프로그래밍</p>
+  </footer>
+</body>
+</html>

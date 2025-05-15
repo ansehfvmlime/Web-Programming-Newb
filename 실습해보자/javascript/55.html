@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 할인율 기본 10 / 입력 하면 별개 조정 가능)
+      function 할인율(값, 할인 = 0.1) {
+        return 값 * (1 - 할인);
+      }
+      function 상품가격(...items) {
+        return items;
+      }
+      // 상품 가격들 정의 by 나머지 매게변수
+      const numbers = 상품가격(
+        "4000",
+        "10000",
+        "12000",
+        "20000",
+        "1000",
+        "15000",
+        "13500",
+        "50000"
+      );
+
+      // 10000원 이상만 추려내기.
+      const filtnum = numbers.filter(function (value) {
+        return value >= 10000;
+      });
+
+      // 할인율이 적용된 가격으로 변환
+
+      const discount = filtnum.map(function (value) {
+        return 할인율(value);
+      });
+
+      discount.forEach(function (value) {
+        console.log(`할인 가능한 품목의 최종 가격은 ${value}입니다.`);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

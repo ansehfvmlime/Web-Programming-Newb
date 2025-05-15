@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4/28일 수업참여</title>
+    <script>
+      // 1. 사용자 이름 물어보는 팝업창 생성
+      name = prompt("사용자 이름 입력");
+      //2. 현재 시간에 따라 오전 또는 오후 인사를 팝업창으로 출력하는 함수 호출
+      const date = new Date();
+      nowTIme = date.getHours();
+      // 선언적 함수
+      function 오전() {
+        alert(
+          `${name}님 현재 시간은 ${nowTIme}시 입니다. 좋은 오전 보내고 계신가요?`
+        );
+      }
+      // 익명 함수
+      const 오후 = function () {
+        alert(
+          `${name}님 현재 시간은 ${nowTIme}시 입니다. 좋은 오후 보내고 계신가요?`
+        );
+      };
+
+      // 시단에 따라 오전/오후 인사 출력
+      if (nowTIme < 12) {
+        오전();
+      } else {
+        오후();
+      }
+
+      // 학생명을 저장하는 배열을 생성
+      학생명 = ["Jhon", "Sarah", "Emma", "Kate", "Endrew", "Michael"];
+      학생명.push(name);
+
+      for (const 학생 of 학생명) {
+        console.log(`학생이름: ${학생}`);
+      }
+
+      //   배열에서 학생 이름 삭제
+      const index = 학생명.indexOf("Emma");
+      학생명.splice(index, 2);
+
+      const index2 = 학생명.indexOf("Andrew");
+      학생명.splice(index2, 0, "Brain");
+
+      for (이름 in 학생명) {
+        console.log(`${이름}번째 학생 이름: ${학생명[이름]}`);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

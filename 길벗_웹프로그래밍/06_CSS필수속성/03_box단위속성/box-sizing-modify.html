@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box sizing</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 10px;
+        box-sizing: border-box; /* width, height 속성의 적용 기준을 바꿈 - 원래는 글을 감싸고 있는 content의 높이와 너비가 100x100인데
+        border-box로 처리해서 border까지가 100x100으로 만듬  */
+        background-color: red;
+        /* Block: Width 100% 차지, 자동 줄바꿈 ex) <p> <div> 등등*/
+        /* Inline: 줄 바꿈 없이 내용만큼 Width 차지*/
+        display: inline-block;
+      }
+
+      .outer {
+        width: 800px;
+        height: 130px;
+        padding: 10px;
+        background-color: yellow;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 에 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+      <div>박스 안 내용 박스 안 내용</div>
+    </div>
+  </body>
+</html>

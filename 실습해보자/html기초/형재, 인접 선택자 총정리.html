@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>두번째 웹페이지</title>
+    <style>
+      /* class="box"의 자식 div 모두 (자식의 자식은 x)*/
+      .box > div {
+        color: yellow;
+      }
+      /* class="box" 의 자식 div 전부 (자식의 자식 포함) */
+      .box div {
+        background-color: green;
+      }
+      /* h2 바로 뒤에 나오는 div 하나 */
+      h2 + div {
+        font-size: 30px;
+      }
+      /* h2 뒤에 나오는 형제 div 전부 */
+      h2 ~ div {
+        text-decoration: underline;
+      }
+      h3 {
+        border: 5px solid red;
+        padding: 10px;
+        height: 100px;
+        width: 100%;
+        /* box-sizing: border-box; */
+        box-shadow: 10px 10px 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>box 클래스의 첫번째 자식</div>
+      <ul>
+        <li><div>box 클래스의 자식의 자식 1 - div 클래스의 자식 1</div></li>
+        <li><div>box 클래스의 자식의 자식 2 - div 클래스의 자식 2</div></li>
+      </ul>
+      <h2>제목 1</h2>
+      <div>box 클래스의 세 번째 자식</div>
+      <div>box 클래스의 네 번째 자식</div>
+      <div>box 클래스의 다섯 번째 자식</div>
+      <ul>
+        <div>box 클래스의 자식의 자식 3 - div 클래스의 자식 3</div>
+      </ul>
+    </div>
+    <h3>트왈랄라라</h3>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+/* 중간코딩시험 - 이름/학번 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+}
+h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+/* 그룹 선택자 */
+th, td {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+button{
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: silver;
+}
+button:hover{
+  background-color: #eee;
+  
+}
+
+#aa{
+  grid-area: 11;
+}
+#bb{
+  grid-area: 22;
+}
+#cc{
+  grid-area: 33;
+}
+#dd{
+  grid-area: 44;
+}
+#ee{
+  grid-area: 55;
+}
+#ff{
+  grid-area: 66;
+}
+.intro-reformer{
+  background-color: thistle;
+}
+.mat-pilates{
+  background-color: ;
+}
+.reformer-flow{
+  background-color: 
+}
+.cardio-sculpt{
+  background-color: 
+}
+.pilates-stretch{
+  background-color: 
+}
+.private-session{
+  background-color: 
+}
+.class-descriptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "11"
+  "22 33 44 55"
+  "66";
+}
+.class-box {
+  transition: transform 0.3s;
+}

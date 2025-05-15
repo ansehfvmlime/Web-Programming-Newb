@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 김민서 / 60211644 /기초웹프로그래밍 과제 #2-2 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여행 도우미</title>
+    <!--여행지 선택 부분 앞에 비어있는거 보기 지저분해서 설정-->
+    <link rel="stylesheet" href="./과제css.css" />
+    <style>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header>
+        <h1>여행 일정 조율 서비스</h1>
+      </header>
+      <nav>
+        <a href="#" title="홈페이지">홈페이지</a>
+        <a href="#" title="공지사항">공지사항</a>
+        <a href="#" title="여행사 정보">여행사 정보</a>
+        <a href="#" title="환율">엔/원 환율 보러가기</a>
+        <a href="#" title="일본 날씨">일본 날씨</a>
+      </nav>
+      <main>
+        <form action="#">
+          <!--개인정보 선택-->
+          <fieldset>
+            <legend>개인정보 입력 (필수).</legend>
+            <!--<label
+            >ID(4~8 글자):
+            <input
+              type="text"
+              name="id"
+              placeholder="아이디를 입력하세요"
+              minlength="4"
+              maxlength="8"
+              size="15"
+              required
+            />
+          </label>
+          -->
+            <!--명시적 방법 사용-->
+            <p>
+              <label for="userid">사용자명: </label>
+              <input
+                type="text"
+                id="userid"
+                name="id"
+                placeholder="사용자명을 입력해주세요"
+                minlength="2"
+                maxlength="8"
+                size="20"
+                autofocus
+                required
+              />
+            </p>
+            <p>
+              <label for="userpw">PW(4글자 이상): </label>
+              <input
+                type="password"
+                id="userpw"
+                name="pw"
+                minlength="4"
+                size="20"
+                required
+              />
+            </p>
+
+            <p>
+              <label for="useremail">E-mail:</label>
+              <input type="email" id="useremail" name="email" required />
+            </p>
+
+            <p>
+              <label for="usertel">Tel: </label>
+              <input type="tel" id="usertel" name="tel" required />
+            </p>
+
+            <p>
+              <label for="usersex">성별: </label>
+              <select name="sex" id="usersex">
+                <option value="male" name="male">남자</option>
+                <option value="female" name="female">여자</option>
+                <option value="non" name="non">둘 다 아님</option>
+              </select>
+            </p>
+          </fieldset>
+          <!--여행지 선택-->
+          <fieldset>
+            <legend>여행지 선택 (중복 가능)</legend>
+            <ul>
+              <ul>
+                <p><strong>도쿄</strong></p>
+                <li>
+                  <label for="sensoji">센소지</label>
+                  <!--기본값 설정-->
+                  <input type="checkbox" id="sensoji" name="ASKS" checked />
+                </li>
+                <li>
+                  <label for="sibuyasky">시부야스카이</label>
+                  <input type="checkbox" id="sibuyasky" name="sby" />
+                </li>
+                <li>
+                  <label for="gokyo">고쿄(황거)</label>
+                  <input type="checkbox" id="gokyo" name="GK" />
+                </li>
+              </ul>
+
+              <ul>
+                <p><strong>교토</strong></p>
+                <li>
+                  <label for="giyo">기요미즈데라(청수사)</label>
+                  <!--둘다 하나씩 기본값으로 설정-->
+                  <input type="checkbox" id="" name="giyo" checked />
+                </li>
+                <li>
+                  <label for="inari">후시미 이나리 신사</label>
+                  <input type="checkbox" id="inari" name="TORI" />
+                </li>
+                <li>
+                  <label for="Akando">에이칸도</label>
+                  <input type="checkbox" id="Akando" name="Akando" />
+                </li>
+              </ul>
+            </ul>
+          </fieldset>
+
+          <!--날짜 선택-->
+          <fieldset id="Date">
+            <legend>날짜 선택 (필수)</legend>
+            <p>출발 날짜 지정하기</p>
+            <input type="datetime-local" name="depart" required />
+            <p>도착 날짜 지정하기</p>
+            <input type="datetime-local" name="arrive" required />
+          </fieldset>
+
+          <!-- 기타 요청사항 -->
+          <fieldset>
+            <legend>기타 요청사항 (선택)</legend>
+            <label for="etc"></label>
+            <textarea
+              id="etc"
+              name="etc"
+              cols="40"
+              rows="30"
+              name="request"
+              placeholder="요청사항을 기입하세요(선택)"
+            ></textarea>
+          </fieldset>
+          <p>
+            <input type="reset" value="전체 초기화하기" />
+            <input type="submit" value="제출하기" />
+          </p>
+        </form>
+      </main>
+
+      <footer>
+        <p><em> 김민서 / 60211644 / 기초웹 과제#2-2 </em></p>
+        <a href="./과제1-1.html" target="_blank">여행 정보로 돌아가기</a> <br />
+      </footer>
+    </div>
+  </body>
+</html>

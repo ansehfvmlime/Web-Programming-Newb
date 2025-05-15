@@ -1,0 +1,167 @@
+<!-- 중간코딩시험 - 이름/학번 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>중간코딩시험-김민서/60211644</title>
+    <link rel="stylesheet" href="./pilatesClass.css" />
+  </head>
+
+  <body>
+    <h1>Weekly Pilates Class Schedule</h1>
+
+    <!-- 1. 필라테스 클래스 시간표 작성 -->
+    <!-- 클래스 이름들: -->
+    <!-- Intro Reformer Pilates, Mat Pilates, Reformer Flow, Cardio Sculpt, Pilates Stretch & Recovery, 1:1 Private Session -->
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>07:00</th>
+          <td>Mat Pilates</td>
+          <td rowspan="2">1:1 Private Session</td>
+          <td>Reformer Flow</td>
+          <td rowspan="2">1:1 Private Session</td>
+          <td>Cardio Sculpt</td>
+          <td>Mat Pilates</td>
+        </tr>
+        <tr>
+          <th>08:00</th>
+          <td>Reformer Flow</td>
+          <!-- <td></td> -->
+          <td>Cardio Scuipt</td>
+          <!-- <td></td> -->
+          <td>Mat Pelates</td>
+          <td>Reformer Flow</td>
+        </tr>
+        <tr>
+          <th>09:00</th>
+          <td>Intro Reformer</td>
+          <td>Mat Pilates</td>
+          <td>Mat pilates</td>
+          <td>Reformer Flow</td>
+          <td>Reformer Flow</td>
+          <td>Cardio Sculpt</td>
+        </tr>
+        <tr>
+          <th>10:00</th>
+          <td>Cardio Sculpt</td>
+          <td>Intro Reformer</td>
+          <td>Intro Reformer</td>
+          <td colspan="3">No Class</td>
+          <!-- <td></td>
+        <td></td> -->
+        </tr>
+        <tr>
+          <th>18:00</th>
+          <td>Reformer Flow</td>
+          <td colspan="2">No Class</td>
+          <!-- <td></td> -->
+          <td>1:1 Private Session</td>
+          <td>Cardio Sculpt</td>
+          <td>Cardio Sculpt</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 2. 필라테스 클래스 설명 -->
+    <!-- 4열의 그리드 형태로 출력. 
+      웹 브라우저 너비가 줄어들면 1열로 변환  -->
+    <div class="class-descriptions">
+      <h2>Class Descriptions</h2>
+
+      <div class="class-box intro-reformer" id="aa">
+        <strong>Intro Reformer Pilates:</strong>
+        An introductory class focusing on the core principles of Pilates and
+        familiarization with the Reformer apparatus. Suitable for beginners with
+        no prior experience.
+      </div>
+
+      <div class="class-box mat-pilates" id="bb">
+        <strong>Mat Pilates</strong>
+        A floor-based class emphasizing core strength, flexibility, and body
+        awareness using minimal equipment.
+      </div>
+
+      <div class="class-box reformer-flow" id="cc">
+        <strong>Reformer Flow</strong>
+        A dynamic session utilizing the Reformer to enhance strength,
+        coordination, and balance through continuous movement sequences.
+      </div>
+
+      <div class="class-box cardio-sculpt" id="dd">
+        <strong>Cardio Sculpt</strong>
+        Combines Pilates principles with cardiovascular exercises to elevate
+        heart rate while toning the entire body.
+      </div>
+
+      <div class="class-box pilates-stretch" id="ee">
+        <strong>Pilates Stretch & Recovery</strong>
+        Focuses on gentle stretching and mobility exercises to aid recovery and
+        improve flexibility.
+      </div>
+
+      <div class="class-box private-session" id="ff">
+        <strong>1:1 Private Session:</strong>
+        Personalized Pilates sessions tailored to individual goals and needs.
+      </div>
+    </div>
+
+    <!-- 3. 필라테스 클래스 등록 -->
+    <!-- 요일 선택, 시간 선택, 클래스 선택, 등록 기간 선택, 등록  -->
+    <div class="form-section">
+      <h2>Register for a Class</h2>
+      <form></form>
+    </div>
+    <form action="#">
+      <p>
+        <label for="day">Select Day: </label>
+        <select name="day" id="day">
+          <option value="non">--please choose a day--</option>
+          <option value="Monday">Monday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="time">Select TIme: </label>
+        <input type="time" name="time" id="time" />
+      </p>
+
+      <p>
+        <label for="class">Select Class:</label>
+        <select name="class" id="class">
+          <option value="non2">--Please coose a class--</option>
+          <option value="MP">Mat Pilates</option>
+          <option value="RF">Reformer Flow</option>
+          <option value="CS">Cardio Sculpt</option>
+          <option value="PR">Pilates Stretch & Recovery</option>
+          <option value="PS">1:1 Private Session</option>
+        </select>
+      </p>
+      <p>
+        Registration Period:
+        <br />
+        <label><input type="checkbox" name="1M" value="1M" />1 Month</label>
+        <label><input type="checkbox" name="2M" value="2M" />2 Month</label>
+        <label><input type="checkbox" name="3M" value="3M" />3 Month</label>
+        <label><input type="checkbox" name="4M" value="4M" />4 Month</label>
+      </p>
+      <button type="submit" value="Register">Register</button>
+    </form>
+  </body>
+</html>

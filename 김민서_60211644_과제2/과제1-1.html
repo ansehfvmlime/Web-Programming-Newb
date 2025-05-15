@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 김민서 / 60211644 / 기초웹프로그래밍 과제 #2-1 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일본 여행 정보 제공 서비스</title>
+    
+    <link rel="stylesheet" href="./과제css.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+      </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!--header 영역-->
+    <header id="home">
+      <h1>직접 보고 추천하는 지역별 일본 여행지 TOP3</h1>
+      <hr class="divider" />
+      <p>
+        도쿄 여행 3번, 교토 여행 2번을 다녀보며, 여기는 정말
+        <em><strong>추천할 만한</strong></em> 관광지다 싶은 장소를 소개하고 <br />
+        그 장소의 <strong>매력</strong>에 대해 소개해보고자 합니다.
+      </p>
+      <a href="https://www.instagram.com/kim_ms_0522/" target="_blank" title="민서인스타"
+        ><img src="./img/여행시작.jpg" width="150" alt="여행사진" /> 다양한 여행
+        사진이 궁금하다면?
+      </a>
+    </header>
+    <!--네비게이션 영역: 다른 영역이나 외부를 연결하는 링크 영역-->
+    <nav>
+      <h2 id="mokcha">바로 가기</h2>
+      <a href="#home" title="홈페이지">홈페이지</a>
+      <a href="#tokyo" title="도쿄 3선">도쿄 여행지 3선</a>
+      <a href="#kyoto" title="교토 3선">교토 여행지 3선</a>
+      <a href="#excel" title="총정리">한눈에 보는 총정리</a>
+      <a href="./과제1-2.html" target="_blank">여행 일정 조율 서비스</a>
+      <!-- 가상의 웹 -->
+      <a href="#" title="내 정보">내 정보</a>
+      <a href="#" title="커뮤니티">커뮤니티</a>
+    </nav>
+    <!--본문 / 없는 경우도 있음음-->
+    <main>
+      <!--도쿄 섹션 / 이건 거의다 있음-->
+      <section id="tokyo">
+        <h2>도쿄</h2>
+        <h4>첫 번째로, 도쿄의 가장 유명한 여행지인 <span>센소지</span>입니다.</h4>
+        <img src="./img/도쿄_아사쿠사.jpg" alt="아사쿠사 사진" width="250" />
+        <br>
+        <q cite="https://livejapan.com/ko/in-tokyo/in-pref-tokyo/in-asakusa/article-a0000554/"><strong>아사쿠사</strong>에 위치한 도쿄 최고(最古) 사찰로,<br />
+          628년 바다에서 건져올린 관세음보살을 모시기 위하여 세운 절이라는
+          전설이 있습니다.</q>
+        </p>
+        일본 도쿄를 대표하는 관광지이며, 입장료가 없어 매우 많은 관관객들이 방문합니다.<br>
+        센소지 앞으로 놓인 포차들이 매우 다양하여 구경하는 재미가 있습니다.<br>
+        <strong>1년 운세</strong>를 뽑을 수도 있으니 꼭 <span id="blink">대길</span>을 뽑아봅시다.
+        </p>
+        <br>
+        <h4>두 번째로, 도쿄의 시부야에 위치한 <span>시부야 전망대</span>입니다.</h4>
+        <img src="./img/시부야스카이.jpg" alt="시부야스카이" width="250"> <img src="./img/도쿄_시부야.jpg" alt="시부야" width="250"><br>
+        <q cite="https://www.gotokyo.org/kr/spot/1749/index.html">시부야 스카이는 시부야 스크램블 스퀘어 타워 47층(최상층)에 있는, 높이 229미터의 전망대입니다.</q>
+        <p>
+          스크램블 교차로, 롯폰기 힐스 등 도쿄의 유명한 명소들은 거의 다 볼 수 있는 옥상 전망대입니다.<br>
+          멋진 시티뷰와 더불어 다양한 볼거리와 액티비티도 있으니 시간을 내서 가보는 것을 추천드립니다.<br>
+          <em>참고로 비가 온다면 전망대를 이용하지 못하니 꼭 날씨를 확인하고 맑은 날에 가시는 것을 추천합니다.</em>
+        </p>
+        <br>
+        <h4>마지막으로, 도쿄 중심에 존재하는 <span>고쿄(황거)</span>입니다.</h4>
+        <img src="./img/도쿄_고궁.jpg" alt="고궁" width="250"><br>
+        <q cite="https://www.gotokyo.org/kr/story/guide/a-noble-look-at-tokyos-imperial-palace-a-guide-to-the-royal-residence/index.html">
+          일왕이 거주하는 공간으로, 막부 시절 에도성으로 불리었으며 메이지 유신이 시작된 1868년 이후 메이지 일왕이 에도성에 입성한 이후 도케이 성으로 개명.<br>
+          제2차 세계대전 이후 황거라는 이름으로 명칭하였습니다.</q>
+        <p>도쿄역과 인접하게 위치하고 있어서 도쿄 여행을 시작, 혹은 마무리 하는 날 가볍게 산책하며 둘러보기 좋은 곳입니다.<br>
+          성의 해자를 따라 배를 타고 주변을 돌아보는 것도 가능하며, 일본인 가족들도 많이 찾는 편안한 공간입니다.<br>
+          <em>하지만 예약을 하지 않으면 궁 내부를 모두 돌아보는 것이 불가능하기에 자세한 투어를 하고싶다면 6개월 전 예약은 필수입니다.</em>
+        </p>
+        <a href="https://sankan.kunaicho.go.jp/multilingual/lang/ko/information.html" target="_blank" title="황거 예약">황거 투어 예약 알아보기</a>
+      </section>
+      <hr class="divider">
+      <!--교토 섹션-->
+      <section id="kyoto">
+        <h2>교토</h2>
+        <h4>첫 번째로, 교토의 대표 관광지로 꼽히는 사찰인 <span>기요미즈데라(청수사)</span>입니다.</h4>
+        <img src="./img/교토_기요미즈데라.jpg" alt="기요미즈데라 사진" width="250"><br>
+        <q cite="https://ko.wikipedia.org/wiki/%EA%B8%B0%EC%9A%94%EB%AF%B8%EC%A6%88%EB%8D%B0%EB%9D%BC">나라 시대인 778년 창건된 사찰로 '물이 맑은 절'이라는 뜻을 가지고 있습니다.</q>
+
+        <p>수없이 많은 세월동안 소실과 복원을 반복하였으며, 시간을 담은 목조의 매력을 느낄 수 있는 사찰입니다.<br>
+          저는 가을에 한번, 겨울에 한번 방문하였는데 계절에 따라 느껴지는 특색있는 매력이 존재하는 곳이기에<br>
+          계절에 따라 달라지는 기요미즈데라의 매력을 비교해보는 것도 좋을 것 같습니다.
+        </p>
+        <br>
+        <h4>두 번째로, 교토의 유명 포토 스팟이자 인스타 명소로 유명해진 <span>후시미 이나리 신사</span>입니다.</h4>
+        <img src="./img/교토_후시미이나리신사.jpg" alt="후시미이나리신사 사진" width="250"><br>
+        <q cite="https://www.japan.travel/ko/spot/1128/">풍년과 사업의 신인 이나리 신을 모시는 이나리 신사의 총본산이며
+          1만개가 넘는 토리이가 길을 따라 나열되어 있는 모습은 일본을 떠올리게 하는 가장 상징적인 이미지라고도 불립니다.</q>
+        <p>산 정상으로 향하는 산책로 전부가 토리이로 가득한 모습은 사진으로 꼭 남기고 싶게 만드는 매력을 지니고 있습니다.<br>
+          강렬한 색상의 토리이가 끝없이 나열된 배경을 바탕으로 인생사진 찍기 좋은 포토 스팟이 아닐까 싶습니다.<br>
+          <em>하지만 산 정상까지 가는데에 1시간이 넘게 걸리고 경사가 꽤 있어서 채력이 약하신 분들은 굳이 끝까지 안올라가셔도 무방하다 생각합니다.</em>
+        </p>
+        <br>
+        <h4>마지막으로, &quot;가을하면 에이칸도&quot;라는 말로 유명한 그 <span>에이칸도(젠린지)</span>입니다.</h4>
+        <img src="./img/교토_에이칸도.jpg" alt="에이칸도 사진" width="250"><br>
+        <q cite="https://www.japan.travel/ko/spot/1172/">본래 어느 귀족의 개인 사저였으나, 853년 소유주인 귀족이 한 승려에게 선물로 주었다고 알려진 건축물입니다.</q>
+        <p>
+          불교의 색이 녹아난 엔틱하면서 단조로운 나무 건축물과, 색체의 끝을 보여주는 가지 각색의 단풍의 대비가 정말 아름다웠으며,<br>
+          다른 나라에서는 찾아볼 수 없는 아름다운 단풍을 볼 수 있는 명소입니다.<br>
+          만약 가을에 교토를 간다면 에이칸도는 정말 추천드립니다.
+        </p>
+      </section>
+      <hr class="divider">
+      <!--표 섹션-->
+      <section id="excel">
+        <h2>표로 보는 각 여행지의 입장료와 추천 계절</h2>
+        <p>한 눈에 각 관광 명소의 <strong>입장료</strong>와 <strong>추천 계절</strong>에 대하여 설명해드리겠습니다.</p>
+        <table>
+          <caption><em>여행지 총 정리</em></caption>
+          <!-- 표 확장 -->
+          <!-- Style 부분 CSS로 -->
+          <!-- <col style="width: 160px;">
+          <col style="width: max-content;">
+          <colgroup span="2" style="width: 160px;"></colgroup> -->
+          <thead>
+            <tr>
+              <th scope="col">관광지</th>
+              <th scope="col">위치</th>
+              <th scope="col">입장료</th>
+              <th scope="col">추천 계절</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">센소지</th>
+              <td rowspan="3">도쿄</td>
+              <td>무료</td>
+              <td>봄</td>
+            </tr>
+            <tr>
+              <th scope="row">시부야스카이</th>
+              <!--도쿄-->
+              <td>2200엔 (성인)</td>
+              <td rowspan="2">봄, 가을</td>
+            </tr>
+            <tr>
+              <th scope="row">고쿄</th>
+              <!--도쿄-->
+              <td>무료(투어 제외)</td>
+              <!--봄, 가을-->
+            </tr>
+            <tr>
+              <th scope="row">청수사</th>
+              <td rowspan="3">교토</td>
+              <td rowspan="2">500엔</td>
+              <td>가을, 겨울</td>
+            </tr>
+            <tr>
+              <th scope="row">에이칸도</th>
+              <!--교토-->
+              <!--500엔엔-->
+              <td rowspan="2">가을</td>
+            </tr>
+            <tr>
+              <th scope="row">후시미이나리신사</th>
+              <!--교토-->
+              <td>무료</td>
+              <!--가을-->
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="4"><a href="#mokcha">목차로 이동</a></th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+    
+    <!--페이지 내용과 직접 연관 X / 광고글, 참조글 등-->
+    <aside>
+      <hr class="divider">
+      <h2>일본 여행이 가고 싶어졌다면?</h2>
+      <!-- 다른 파일로 연결 -->
+        <p>자세한 여행 일정 조율을 위해 <a href="./과제1-2.html" target="_blank">여행 일정 조율 서비스</a>로 이동하기</p>
+        <hr class="divider">
+        <p><a href="#top">맨 위로</a></p>
+    </aside>
+    <!--꼬리말: 저작권 정보나 연락처 같은거-->
+    <footer>
+      <p><em> 김민서 / 60211644 / 기초웹 과제#2-1 </em></p>
+      <div id="bottomMenu">
+        <ul>
+          <!-- 기타 웹 페이지 url로 연결 -->
+          <li><a href="https://www.gotokyo.org/en/index.html" target="_blank">도쿄 공식 여행 가이드</a></li>
+          <li><a href="https://kyoto.travel/ko/" target="_blank">교토 공식 여행 가이드</a></li>
+          <li><a href="#">일본 공식 여행 가이드</a></li>
+        </ul>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sticky</title>
+    <!-- 절대 좌표에 고정된것처럼 위치하다가 특정 좌표에 다다르면 웹사이트 화면상에 지정된 좌표에 고정됨 -->
+    <style>
+      body {
+        margin: 0;
+        height: 4000px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .red-box {
+        background-color: red;
+      }
+      .green-box {
+        background-color: green;
+        position: sticky;
+        top: 0;
+      }
+      .blue-box {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+  </body>
+</html>

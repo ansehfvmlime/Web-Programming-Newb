@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form을 사용해보자</title>
+  </head>
+  <body>
+    <!-- submit으로 제출하기 위해서는 'name'을 사용한다-->
+    <h1>Form을 사용해보자</h1>
+    <form action="#">
+      <label>
+        아이디(4-8글자):
+        <input
+          type="text"
+          name="id"
+          placeholder="아이디를 입력하세요"
+          minlength="4"
+          maxlength="8"
+          size="20"
+          required
+          autofocus
+        />
+        <p></p>
+      </label>
+      <label
+        >비밀번호(4글자 이상):
+        <input
+          type="password"
+          placeholder="비밀번호를 입력하세요"
+          minlength="4"
+          size="20"
+        />
+      </label>
+
+      <p></p>
+      <input type="submit" value="로그인" />
+      <input type="reset" value="취소" />
+      <input type="button" value="비밀번호 찾기" />
+      <input
+        type="image"
+        src="./img/네이버.jpeg"
+        width="20"
+        alt="네이버로 회원가입"
+        onclick="alert('회원가입 창 연결')"
+      />
+
+      <hr />
+
+      <p></p>
+      <label for="tel">전화번호</label>
+      <input type="tel" id="tel" />
+      <br />
+      <label for="email">이메일</label>
+      <input type="email" id="email" />
+      <br />
+      <label for="url">URL</label>
+      <input type="url" id="url" />
+      <br />
+      <label for="search">search</label>
+      <input type="search" id="search" />
+      <br />
+
+      <hr />
+
+      <p>주문할 상품을 선택하세요.</p>
+      <label><input type="checkbox" name="fruit" value="apple" />사과</label>
+      <label><input type="checkbox" name="fruit" value="pear" />배</label>
+      <label><input type="checkbox" name="fruit" value="peach" />복숭아</label>
+      <label><input type="checkbox" name="fruit" value="kiwi" />키위</label>
+      <br />
+      <p>포장을 선택하세요.</p>
+      <label><input type="radio" name="gift" value="yes" />선물 포장</label>
+      <label
+        ><input type="radio" name="gift" value="no" checked />선물 포장
+        안함</label
+      >
+      <hr />
+
+      <p>주문할 상품과 수량을 선택하세요.</p>
+      <label><input type="checkbox" name="fruit" value="apple" />사과</label>
+      <input type="number" min="1" max="10" value="1" />개 (최대 10개)<br />
+      <label><input type="checkbox" name="fruit" value="pear" />배</label>
+      <input type="number" min="1" max="5" />개 (최대 5개)<br />
+      <label><input type="checkbox" name="fruit" value="peach" />복숭아</label>
+      <input type="range" min="1" max="10" value="1" />개 (최대 10개)<br />
+      <label><input type="checkbox" name="fruit" value="kiwi" />키위</label>
+      <input type="range" min="5" max="20" step="5" />개 (최대 20개, 5개 단위로
+      선택 가능)
+
+      <h3>날짜 지정하기</h3>
+      <input type="date" />
+      <input type="month" />
+      <input type="week" />
+      <hr />
+      <h3>시간 지정하기</h3>
+      <input type="time" />
+      <input type="datetime-local" />
+      <hr />
+      <h3>날짜 범위 제한하기</h3>
+      <input type="date" min="2022-10-1" max="2022-10-15" />
+      <hr />
+
+      <fieldset>
+        <legend>태두리 써보기</legend>
+        <p>본인 사진을 첨부하세요</p>
+        <input type="file" />
+        <p>배경색을 지정하세요</p>
+        <input type="color" />
+      </fieldset>
+      <hr />
+      <h3>option 사용해보기</h3>
+      <fieldset>
+        <legend>개인정보 입력</legend>
+        <label for="city">지역</label>
+        <select name="city" id="city">
+          <optgroup label="서울시">
+            <option value="성북구">성북구</option>
+            <option value="강북구">강북구</option>
+            <option value="노원구">노원구</option>
+          </optgroup>
+          <optgroup label="부산시">
+            <option value="부산진구">부산진구</option>
+            <option value="사하구">사하구</option>
+            <option value="서구">서구</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <hr />
+      <h3>버튼 사용해보가</h3>
+      <!--input type="submit"이랑 button type submit 역할이 똑같음 / img랑 글씨를 버튼 태그 사이에 같이 넣을 수 있는 장점이 존재함-->
+      <button type="submit">input에서 value에 들어갈 값</button>
+      <input type="submit" value="여기는 value에 넣어야함" />
+      <button type="submit">
+        <img src="./img/네이버.jpeg" alt="네이버" width="30" /> 네이버 버튼
+      </button>
+      <hr />
+      <h3>멀티 미디어 설정을 해보자</h3>
+      <br />
+      <video src="#" controls autoplay width="300"></video> <br />
+      <audio src="#" controls autoplay width="30"></audio>
+    </form>
+  </body>
+</html>
