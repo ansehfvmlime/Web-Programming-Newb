@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // class = rect로 정의한 값에 대해 정의의
+        const rects = document.querySelectorAll(".rect");
+        const picture = ["HTML", "CSS", "JS", "React"];
+
+        rects.forEach((rect, index) => {
+          const width = (index + 1) * 50;
+          const height = (index + 1) * 50;
+          const src = `./img/${picture[index]}.png`;
+
+          // setAttribite("rect" 클래스를 갖고 있는 img에 src 기능을 추가하고, 그 src 안에 넣을 값을 위에서 정의한 경로, 크기 등의 값을 주는 느낌)
+          // 현재 <img class="rect">로 되어있는 부분을 <img src = "./img/HTML.png" width=50 height=50> 이런 식으로 한번에 기능 추가
+          rect.setAttribute("src", src);
+          rect.setAttribute("width", width);
+          rect.setAttribute("height", height);
+        });
+
+        // 단일 요소
+        const header = document.querySelector("h1");
+
+        header.textContent = "HEADER";
+        header.style.color = "white";
+        header.style.backgroundColor = "black";
+        header.style.padding = "5px";
+
+        // 문서 객체 여러 개를 배열로 읽어들임
+        const ps = document.querySelectorAll("p");
+
+        ps.forEach((p) => {
+          p.textContent = "내용들";
+          p.style.color = "white";
+          p.style.backgroundColor = "pink";
+          p.style.padding = "5px";
+        });
+
+        // 문서 객체 조작하기
+        const a = document.querySelector("#a");
+        const b = document.querySelector("#b");
+
+        a.textContent =
+          "<h1>textContent 속성 - 태그가 역할을 수행 x -> 그대로 출력 </h1>";
+        b.innerHTML = "<h1>innerHTML 속성 - 태그가 역할을 수행한다</h1>";
+      });
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+    <img class="rect" />
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <div id="a"></div>
+    <div id="b"></div>
+  </body>
+</html>

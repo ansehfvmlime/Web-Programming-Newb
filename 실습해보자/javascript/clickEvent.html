@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let counter = 0;
+        const h1 = document.querySelector("h1");
+
+        const inbutton = document.querySelector("#increase");
+        const debutton = document.querySelector("#decrease");
+
+        //
+        inbutton.addEventListener("click", (event) => {
+          counter++;
+          h1.textContent = `Click:${counter}`;
+        });
+        debutton.addEventListener("click", (event) => {
+          counter--;
+          h1.textContent = `Click:${counter}`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Click: 0</h1>
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+  </body>
+</html>
