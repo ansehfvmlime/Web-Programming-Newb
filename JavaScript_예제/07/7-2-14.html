@@ -3,21 +3,22 @@
   <head>
     <title></title>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const textarea = document.querySelector('textarea')
-        const h1 = document.querySelector('h1')
-        let timerId
+      document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.querySelector("textarea");
+        const h1 = document.querySelector("h1");
+        let timerId;
 
-        textarea.addEventListener('focus', (event) => {
+        textarea.addEventListener("focus", (event) => {
           timerId = setInterval(() => {
-            const length = textarea.value.length
-            h1.textContent = `글자 수: ${length}`
-          }, 50)
-        })
-        textarea.addEventListener('blur', (event) => {
-          clearInterval(timerId)
-        })
-      })
+            const length = textarea.value.length;
+            h1.textContent = `글자 수: ${length}`;
+          }, 50);
+        });
+        // 마우스가 떠나면 - blur (textarea를 선택한 상황에서만 화면에 글씨가 출력된다)
+        textarea.addEventListener("blur", (event) => {
+          clearInterval(timerId);
+        });
+      });
     </script>
   </head>
   <body>

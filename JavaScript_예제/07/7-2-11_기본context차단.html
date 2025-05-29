@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imgs = document.querySelectorAll("img");
+
+        imgs.forEach((img) => {
+          img.addEventListener("contextmenu", (event) => {
+            // event.prevent 사용해서 이미지 복사 등 사이트의 기본 기능을 차단할 수 있음
+            event.preventDefault();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <img src="./스크린샷 2025-03-10 130820.png" alt="" />
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      // 환율 계산기
+      // change 이벤트 리스너를 활용하여 option이 변화하면 변환상수를 그 option이 가지고있는 value를 기반으로 변환상수를 생성한다.
+      // keyup 이벤트 리스너를 활용하여 나의 입려값에 따른 input 값을 출력하여 보여준다.
+      document.addEventListener("DOMContentLoaded", () => {
+        let 현재값;
+        let 변환상수 = 1;
+
+        const select = document.querySelector("select");
+        const input = document.querySelector("input");
+        const span = document.querySelector("span");
+
+        const calculate = () => {
+          span.textContent = (현재값 * 변환상수).toFixed(2);
+        };
+
+        select.addEventListener("change", (event) => {
+          const options = event.currentTarget.options;
+          // options 안에 선택된 index의 번호를 불러온다.
+          const index = event.currentTarget.options.selectedIndex;
+          // 생성된 options 배열 안에 위에서 선택한 index 번호로 ex) a[0] 이런식으로 찾아서 .value를 통해 그 값을 찾기.
+          변환상수 = Number(options[index].value);
+          calculate();
+        });
+
+        input.addEventListener("keyup", (event) => {
+          현재값 = Number(event.currentTarget.value);
+          calculate();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" /> 원 =
+    <span></span>
+    <select>
+      <option value="0.00072">달러</option>
+      <option value="0.98">엔</option>
+      <option value="0.00064">유로</option>
+    </select>
+  </body>
+</html>

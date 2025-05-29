@@ -12,7 +12,7 @@
       </style>
   </head>
   <body>
-    <button id="darkModeToggle">🌙 다크모드 전환</button>
+    <script src = "./interection.js"></script>
 
     <div class="grid-container">
       <!--header 영역-->
@@ -55,7 +55,7 @@
         </p>
         일본 도쿄를 대표하는 관광지이며, 입장료가 없어 매우 많은 관관객들이 방문합니다.<br>
         센소지 앞으로 놓인 포차들이 매우 다양하여 구경하는 재미가 있습니다.<br>
-        <strong>1년 운세</strong>를 뽑을 수도 있으니 꼭 <span id="blink">대길</span>을 뽑아봅시다.
+        <span id = "luck"><strong>1년 운세</strong></span>를 뽑을 수도 있으니 꼭 <span id="blink">대길</span>을 뽑아봅시다.
         </p>
         <br>
         <h4>두 번째로, 도쿄의 시부야에 위치한 <span>시부야 전망대</span>입니다.</h4>
@@ -174,6 +174,16 @@
           </tfoot>
         </table>
       </section>
+      <!-- 환율 계산기 -->
+      <h3>지금 일본 및 세계의 환율은 ??</h3>
+      <input id="moneyinput" type="text" placeholder="얼마나 환전하실건가요?" /> 원 =
+      <span id="moneyspace"></span>
+      <select id = moneyselect>
+        <option value = "1">원</option>
+        <option value="0.00072">달러</option>
+        <option value="0.98">엔</option>
+        <option value="0.00064">유로</option>
+      </select>
     </main>
     
     <!--페이지 내용과 직접 연관 X / 광고글, 참조글 등-->
@@ -199,19 +209,5 @@
     </footer>
     </div>
   </body>
-  <script>
-  const toggleButton = document.getElementById("darkModeToggle");
-
-  toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    // 버튼 텍스트도 변경
-    if (document.body.classList.contains("dark-mode")) {
-      toggleButton.textContent = "☀️ 라이트모드 전환";
-    } else {
-      toggleButton.textContent = "🌙 다크모드 전환";
-    }
-  });
-</script>
-
+  <script src="./1-1.js" async></script>
 </html>

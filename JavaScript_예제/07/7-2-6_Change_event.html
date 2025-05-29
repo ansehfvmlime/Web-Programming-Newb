@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const select = document.querySelector("select");
+        const p = document.querySelector("p");
+
+        select.addEventListener("change", (event) => {
+          // event.currentTarget.options -> select 안에 모든 option들
+          const options = event.currentTarget.options;
+          // option들은 각자 첨자를 통해 몇번 인덱스를 갖고 있는지 값을 가지고있음 (0:떡볶이, 1:순대, 2:오뎅, 3:튀김) 이런식으로
+          const index = event.currentTarget.options.selectedIndex;
+
+          p.textContent = `선택: ${options[index].textContent}`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select>
+      <option>떡볶이</option>
+      <option>순대</option>
+      <option>오뎅</option>
+      <option>튀김</option>
+    </select>
+    <p>선택: 떡볶이</p>
+  </body>
+</html>

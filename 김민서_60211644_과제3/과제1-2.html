@@ -59,7 +59,10 @@
                 autofocus
                 required
               />
+              <button type="button" id="addCompanionBtn">인원 추가</button>
+              <button type="button" id="removeCompanionBtn">감소</button>
             </p>
+            <div id="companions" style="display: inline-block"></div>
             <p>
               <label for="userpw">PW(4글자 이상): </label>
               <input
@@ -70,11 +73,13 @@
                 size="20"
                 required
               />
+              <span style="display: block" id="pw-msg" class="msg"></span>
             </p>
 
             <p>
               <label for="useremail">E-mail:</label>
               <input type="email" id="useremail" name="email" required />
+              <span style="display: block" id="email-msg" class="msg"></span>
             </p>
 
             <p>
@@ -165,5 +170,7 @@
         <a href="./과제1-1.html" target="_blank">여행 정보로 돌아가기</a> <br />
       </footer>
     </div>
+    <!-- async 사용하면 외부 js에서 document.addEventListener("DOMContentLoaded", () => {이 안에 굳이 안해도 됨} -->
+    <script src="./interection.js" async></script>
   </body>
 </html>

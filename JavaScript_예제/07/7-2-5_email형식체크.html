@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("input");
+        const p = document.querySelector("p");
+        const isEmail = (value) => {
+          // 골뱅이를 갖고 있고 && 골뱅이 뒤에 점이 있다면
+          // indexOf -> 몇번째 첨자에 @가 위치하는지 확인 / 없으면 음수 출력 -> 밑의 코드는 @가 나오는 위치가 맨 처음이 아닌곳에 위치하는지 확인
+          // split는 @를 기준으로 배열을 나눈 후에 [1]: @ 뒤에 인덱스들의 배열에서 indexOf로 "."이 존재하는지 확인
+          return value.indexOf("@") > 1 && value.split("@")[1].indexOf(".") > 1;
+        };
+
+        input.addEventListener("keyup", (event) => {
+          const value = event.currentTarget.value;
+          if (isEmail(value)) {
+            p.style.color = "green";
+            p.textContent = `이메일 형식입니다: ${value}`;
+          } else {
+            p.style.color = "red";
+            p.textContent = `이메일 형식이 아닙니다: ${value}`;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+    <p></p>
+  </body>
+</html>

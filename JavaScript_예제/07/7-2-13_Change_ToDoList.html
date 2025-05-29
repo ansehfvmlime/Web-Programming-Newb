@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>할 일 목록</h1>
+    <input id="todo" />
+    <button id="add-button">추가하기</button>
+    <div id="todo-list"></div>
+  </body>
+  <script>
+    // What is Event 대상 객체 - checkbox , input , button (EventListener)
+    // 각각의 대상 객체가 어떤 이벤트를 발생시키는가?
+    // 이벤트 리스너가 수행하는 이벤트 처리 과정이 무엇인가?
+    document.addEventListener("DOMContentLoaded", () => {
+      // 문서 객체를 가져옵니다.
+      const input = document.querySelector("#todo");
+      const todoList = document.querySelector("#todo-list");
+      const addButton = document.querySelector("#add-button");
+
+      // 변수를 선언합니다.
+      let keyCount = 0;
+
+      // 함수를 선언합니다.
+      const addTodo = () => {
+        // 입력 양식에 내용이 없으면 추가하지 않습니다.
+        if (input.value.trim() === "") {
+          alert("할 일을 입력해주세요.");
+          return;
+        }
+
+        // 문서 객체를 설정합니다.
+        const item = document.createElement("div");
+        const checkbox = document.createElement("input");
+        const text = document.createElement("span");
+        const button = document.createElement("button");
+
+        // 문서 객체를 식별할 키를 생성합니다.
+        const key = keyCount;
+        keyCount += 1;
+
+        // item 객체를 조작하고 추가합니다.
+        // const로 생성한 문서 객체 item에 대하여 값을 생성.
+        item.setAttribute("data-key", key);
+        item.appendChild(checkbox);
+        item.appendChild(text);
+        item.appendChild(button);
+        todoList.appendChild(item);
+
+        // checkbox 객체를 조작합니다.
+        checkbox.type = "checkbox";
+        checkbox.addEventListener("change", (event) => {
+          item.style.textDecoration = event.target.checked
+            ? "line-through"
+            : "";
+        });
+
+        // text 객체를 조작합니다.
+        text.textContent = input.value;
+
+        // button 객체를 조작합니다.
+        button.textContent = "제거하기";
+        button.addEventListener("click", () => {
+          removeTodo(key);
+        });
+
+        // 입력 양식의 내용을 비웁니다.
+        input.value = "";
+      };
+
+      const removeTodo = (key) => {
+        // 식별 키로 문서 객체를 제거합니다.
+        const item = document.querySelector(`[data-key="${key}"]`);
+        todoList.removeChild(item);
+      };
+
+      // 이벤트 연결
+      addButton.addEventListener("click", addTodo);
+      input.addEventListener("keyup", (event) => {
+        // 입력 양식에서 Enter 키를 누르면 바로 addTodo() 함수를 호출합니다.
+        const ENTER = 13;
+        if (event.keyCode === ENTER) {
+          addTodo();
+        }
+      });
+    });
+    // 대상객체 - checkbox / input / button / addbutton
+    // checkbox - checkbox의 상태가 check가 된다면 change event를 발생시켜 item의 style을 조작하여 중앙에 줄을 긋는다.
+    // input - keyup event 중에서도 ENTER에 해당하는 값을 지정하여 keyCode == ENTER를 통해 엔터를 눌렀을 경우에 addToDo 함수를 출력
+    //        addToDo는 createElement를 통해 만들어 놓은 문서객체에 setAttribute를 통해서 key값, checkbox,item, button이 포함시킨다.
+    // button - click event를 통해 클릭이 되면 removeToDo 호출 -> 식별 key를 이용하여 click이 일어난 item을 찾아서 제거한다.
+    // addbutton - button에 click event가 발생하면 addToDo 함수를 출력한다.
+  </script>
+</html>
